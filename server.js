@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://temporaryUser:3WL4dZGihwhtsJpB@cluster0-ejib9.mo
 //new user Schema
 const userSchema = new Schema({
     name: String,
-    username: { type: String, required: true, unique: true },
+    username: { type: String, required: true, },
     password: { type: String, required: true },
     admin: Boolean,
     created_at: Date,
