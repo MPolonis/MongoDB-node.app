@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://temporaryUser:3WL4dZGihwhtsJpB@cluster0-ejib9.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://Marcin:asdf@mongo-xondt.mongodb.net/test?retryWrites=true&w=majority',
     {
         useNewUrlParser: true
     });
@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://temporaryUser:3WL4dZGihwhtsJpB@cluster0-ejib9.mo
 //new user Schema
 const userSchema = new Schema({
     name: String,
-    username: { type: String, required: true, },
+    username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     admin: Boolean,
     created_at: Date,
